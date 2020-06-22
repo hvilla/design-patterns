@@ -10,7 +10,7 @@ const proxy = new Proxy(theCava, {
         console.log(chalk.redBright(`Adding to ${prop} a ${value}`));
         obj.push(value);
     },
-    get(obj, prop, receiver) {
+    get(obj, prop) {
         const regExp = /grabA((?:And)?[a-zA-Z_0-9]+)/g;
         const beersToOrder = regExp.exec(prop)
         if (beersToOrder) {

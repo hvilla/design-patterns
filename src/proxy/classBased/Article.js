@@ -1,3 +1,6 @@
+/**
+ * HRVP 2020
+ */
 const _ = require('lodash');
 const ExternalService = require('./data/articles');
 /**

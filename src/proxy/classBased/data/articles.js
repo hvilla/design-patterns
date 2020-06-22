@@ -1,3 +1,7 @@
+/**
+ * HRVP 2020
+ */
+
 const slug = require('slug');
 
 exports.listOfArticles = [

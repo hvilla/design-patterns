@@ -1,5 +1,6 @@
 /**
  * HRVP 2020
+ * @description Example for Factory Pattern (Creational Patterns)
  */
 const Factory1 = require('./Factory1');
 const Factory2 = require('./Factory2');
@@ -26,23 +27,13 @@ const carDefinitions = [
     }
 ];
 
-function createCarsFactory1() {
-    console.log(chalk.blue('============ PRODUCTION FACTORY 1 STARTED ============'))
-    const carsCreated = carDefinitions.map(carDefinition => {
-        return Factory1.build(carDefinition)
-    })
-    console.log(chalk.blue('============ PRODUCTION DONE ============'));
-    console.log(chalk.blue('============ TESTING CARS FOR CLIENTS ============'))
-    carsCreated.forEach(car => {
-        testCar(car);
-    })
-    console.log(chalk.blue('============ TESTING DONE ============\n'))
-}
 
-function createCarsFactory2() {
-    console.log(chalk.magenta('============ PRODUCTION FACTORY 2 STARTED ============'))
+
+
+function createCarsFactory(Factory) {
+    console.log(chalk.magenta(`============ PRODUCTION ${Factory.name} STARTED ============`))
     const carsCreated = carDefinitions.map(carDefinition => {
-        return Factory2.build(carDefinition)
+        return Factory.build(carDefinition)
     })
     console.log(chalk.magenta('============ PRODUCTION DONE ============'));
     console.log(chalk.magenta('============ TESTING CARS FOR CLIENTS ============'))
@@ -59,5 +50,5 @@ function testCar(car) {
     console.log(chalk.yellow(`============ TESTING CAR FOR CLIENT=(${car.getOwner()}) DONE============\n`));
 }
 
-createCarsFactory1();
-createCarsFactory2();
+createCarsFactory(Factory1);
+createCarsFactory(Factory2);
