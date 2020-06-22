@@ -23,6 +23,11 @@ class Suv extends BasicCar {
     stopEngine() {
         console.log(`The Car ${this.brand} with motor=(${this.motor}) is off`);
     }
+
+    _seatBrandedAddons() {
+        const listOfAddons = ['LCD Display', 'GPS']
+        return [{}]
+    }
 }
 
 module.exports = Suv;
