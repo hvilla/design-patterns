@@ -3,10 +3,11 @@
  */
 
 class BasicCar {
-    constructor(doors, horsePower) {
+    constructor(doors, horsePower, motor) {
         this.tires = 4;
         this.doors = doors;
         this.horsePower = horsePower;
+        this.motor = motor;
     }
 
     getTires() {
