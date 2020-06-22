@@ -25,8 +25,8 @@ class Suv extends BasicCar {
     }
 
     _seatBrandedAddons() {
-        const listOfAddons = ['LCD Display', 'GPS']
-        return [{}]
+        const listOfAddons = ['LCD Display', 'GPS'];
+        return listOfAddons;
     }
 }
 
