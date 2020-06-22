@@ -6,7 +6,7 @@ const BasicCar = require('./BasicCar');
 
 class DonkeyCar extends BasicCar {
     constructor(CarDefinition) {
-        super(CarDefinition.doors, CarDefinition.housePower);
+        super(CarDefinition.doors, CarDefinition.horsePower);
         this.motor = CarDefinition.motor;
         this.brand = CarDefinition.brand;
         this.owner = CarDefinition.owner;

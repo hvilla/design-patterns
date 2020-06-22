@@ -4,9 +4,9 @@
 
 const BasicCar = require('./BasicCar')
 
-class Sport extends BasicCar {
+class Suv extends BasicCar {
     constructor(CarDefinition) {
-        super(CarDefinition.doors, CarDefinition.housePower);
+        super(CarDefinition.doors, CarDefinition.horsePower);
         this.motor = CarDefinition.motor;
         this.brand = CarDefinition.brand;
         this.owner = CarDefinition.owner;
@@ -17,7 +17,7 @@ class Sport extends BasicCar {
     }
 
     startEngine() {
-        console.log(`The Car ${this.brand} with motor=(${this.motor}) is on`);
+        console.log(`The Car ${this.brand} with motor=(${this.motor}) with ${this.getHorsePower()}HP is on`);
     }
 
     stopEngine() {
@@ -25,4 +25,4 @@ class Sport extends BasicCar {
     }
 }
 
-module.exports = Sport;
+module.exports = Suv;

@@ -6,24 +6,26 @@ const Factory1 = require('./Factory1');
 const Factory2 = require('./Factory2');
 const chalk = require('chalk');
 
-const carDefinitions = [
-    {
+const carDefinitions = [{
         type: 'donkey_car',
         owner: 'The Old Pello',
         motor: 'QEDM (QEDonkey Motor)',
-        brand: 'MLC (Mary Little Casc)'
+        brand: 'MLC (Mary Little Casc)',
+        horsePower: 1
     },
     {
         type: 'sport',
         owner: 'The R2 Guy',
         motor: 'S-TEC II',
-        brand: 'Chevrolet'
+        brand: 'Chevrolet',
+        horsePower: 144
     },
     {
         type: 'suv',
         owner: 'The Bot Fedex',
         motor: '1.0 TSI',
-        brand: 'Seat'
+        brand: 'Seat',
+        horsePower: 300
     }
 ];
 
