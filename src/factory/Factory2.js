@@ -2,7 +2,9 @@
  * HRVP 2020
  */
 
-const { CarCatalog } = require('./automobiles/carCatalog');
+const {
+    CarCatalog
+} = require('./automobiles/carCatalog');
 
 class Factory2 {
     static build(CarDefinition) {

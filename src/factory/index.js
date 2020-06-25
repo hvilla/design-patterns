@@ -33,16 +33,16 @@ const carDefinitions = [{
 
 
 function createCarsFactory(Factory) {
-    console.log(chalk.magenta(`============ PRODUCTION ${Factory.name} STARTED ============`))
+    console.log(chalk.magenta(`============ PRODUCTION ${Factory.name} STARTED ============`));
     const carsCreated = carDefinitions.map(carDefinition => {
         return Factory.build(carDefinition)
     })
     console.log(chalk.magenta('============ PRODUCTION DONE ============'));
-    console.log(chalk.magenta('============ TESTING CARS FOR CLIENTS ============'))
+    console.log(chalk.magenta('============ TESTING CARS FOR CLIENTS ============'));
     carsCreated.forEach(car => {
         testCar(car);
     })
-    console.log(chalk.magenta('============ TESTING DONE ============\n'))
+    console.log(chalk.magenta('============ TESTING DONE ============\n'));
 }
 
 function testCar(car) {

@@ -12,18 +12,22 @@ class Article {
     }
 
     getArticle(slug) {
-        const article = _.find(this.listOfCachedArticles, { slug })
+        const article = _.find(this.listOfCachedArticles, {
+            slug
+        })
         if (!article) {
-            console.log('Not Cached, will get and store in cache')
-            const articleFromExtService = _.find(ExternalService.listOfArticles, { slug })
+            console.log('Not Cached, will get and store in cache');
+            const articleFromExtService = _.find(ExternalService.listOfArticles, {
+                slug
+            })
             if (articleFromExtService) {
                 this.listOfCachedArticles.push(articleFromExtService);
                 return articleFromExtService;
             } else {
-                console.log('Article dont exist')
+                console.log('Article dont exist');
             }
         } else {
-            console.log('Getted by cache')
+            console.log('Getted by cache');
         }
         return article;
     }

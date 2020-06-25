@@ -18,5 +18,7 @@ CarCatalog[TypeOfAutomobiles.DONKEY_CAR] = DonkeyCar;
 CarCatalog[TypeOfAutomobiles.SPORT] = Sport;
 CarCatalog[TypeOfAutomobiles.SUV] = Suv;
 
-module.exports = { TypeOfAutomobiles, CarCatalog };
-
+module.exports = {
+    TypeOfAutomobiles,
+    CarCatalog
+};
